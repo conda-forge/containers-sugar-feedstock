@@ -11,9 +11,7 @@ source:
 
 build:
   entry_points:
-    - containers-sugar = containers_sugar.__main__:app
-    - kxgr = containers_sugar.__main__:app
-    - sugar = containers_sugar.__main__:app
+    - sugar = sugar.__main__:app
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   number: 0
