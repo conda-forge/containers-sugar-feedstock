@@ -20,25 +20,22 @@ build:
 
 requirements:
   host:
-    - python >=3.8,<3.12
+    - python >=3.8,<4
     - poetry-core >=1.0.0
     - pip
   run:
     - __unix
-    - python >=3.8.1,<3.12
-    - jinja2 <3.1.0
-    - sh >=2.0.0,<3.0.0
-    - pyyaml >=5
-    - colorama >=0.4.6,<0.5.0
-    - urllib3 <2
-    - python-dotenv >=0.21.1,<0.22.0
+    - python >=3.8.1,<4
+    - jinja2 >=2
+    - sh >=2.0.0
+    - pyyaml >=6
+    - colorama >=0.4.6
+    - python-dotenv >=0.21.1
 test:
   imports:
-    - containers_sugar
+    - sugar
   commands:
     - pip check
-    - containers-sugar --help
-    - kxgr --help
     - sugar --help
   requires:
     - pip
