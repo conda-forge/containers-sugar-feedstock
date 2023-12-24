@@ -1,5 +1,5 @@
 {% set name = "containers-sugar" %}
-{% set version = "1.9.1" %}
+{% set version = "1.9.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,38 +7,33 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/containers_sugar-{{ version }}.tar.gz
-  sha256: 8ac2f8f49b0af98a8d81fe44ce85d41d98b33a17894601fd453dbf86b70a5b8b
+  sha256: 007000de26e4fe219a5859749d8e082351f7299c2d199b37b90800369420cfeb
 
 build:
   entry_points:
-    - containers-sugar = containers_sugar.__main__:app
-    - kxgr = containers_sugar.__main__:app
-    - sugar = containers_sugar.__main__:app
+    - sugar = sugar.__main__:app
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   number: 0
 
 requirements:
   host:
-    - python >=3.8,<3.12
+    - python >=3.8,<4
     - poetry-core >=1.0.0
     - pip
   run:
     - __unix
-    - python >=3.8.1,<3.12
-    - jinja2 <3.1.0
-    - sh >=2.0.0,<3.0.0
-    - pyyaml >=5
-    - colorama >=0.4.6,<0.5.0
-    - urllib3 <2
-    - python-dotenv >=0.21.1,<0.22.0
+    - python >=3.8.1,<4
+    - jinja2 >=2
+    - sh >=2.0.0
+    - pyyaml >=6
+    - colorama >=0.4.6
+    - python-dotenv >=0.21.1
 test:
   imports:
-    - containers_sugar
+    - sugar
   commands:
     - pip check
-    - containers-sugar --help
-    - kxgr --help
     - sugar --help
   requires:
     - pip
