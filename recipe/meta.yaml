@@ -29,6 +29,9 @@ requirements:
     - pyyaml >=6
     - colorama >=0.4.6
     - python-dotenv >=0.21.1
+    - textual >=0.48
+    - rich >=13.7
+    - plotille >=5
 test:
   imports:
     - sugar
