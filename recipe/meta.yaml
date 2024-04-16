@@ -30,6 +30,8 @@ requirements:
     - colorama >=0.4.6
     - python-dotenv >=0.21.1
     - plotille >=5
+    - rich >=13.7
+    - textual >=0.48
 test:
   imports:
     - sugar
