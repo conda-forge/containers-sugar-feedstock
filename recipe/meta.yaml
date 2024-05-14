@@ -1,5 +1,5 @@
 {% set name = "containers-sugar" %}
-{% set version = "1.11.4" %}
+{% set version = "1.12.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/containers_sugar-{{ version }}.tar.gz
-  sha256: 2769226ac37d763203513c681e0c38dc3e6814c0cf4a7448db9b50681154b5a9
+  sha256: 4eaf702b891d59b6a6ef1b86908740117d0a89cd1f6c54835da89f0c34d28a8f
 
 build:
   entry_points:
@@ -29,8 +29,9 @@ requirements:
     - pyyaml >=6
     - colorama >=0.4.6
     - python-dotenv >=0.21.1
+    - typer >=0.9.0
     - plotille >=5
-    - rich >=13.7
+    - rich >=10.11.0
     - textual >=0.48
 test:
   imports:
