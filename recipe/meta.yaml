@@ -38,7 +38,10 @@ test:
   imports:
     - sugar
   commands:
-    - pip check
+    # note: pip check fails because it expect compose-go, but that is just a wrapper to the 
+    #       docker compose v2, and it is not available on conda-forge, because it is already 
+    #       provided by docker-compose >=2.
+    # - pip check
     - sugar --help
   requires:
     - pip
