@@ -18,12 +18,12 @@ build:
 
 requirements:
   host:
-    - python >=3.8,<4
+    - python >=3.9,<3.13
     - poetry-core >=1.0.0
     - pip
   run:
     - __unix
-    - python >=3.8.1,<4
+    - python >=3.9,<3.13
     - jinja2 >=2
     - sh >=2.0.0
     - pyyaml >=6
@@ -33,6 +33,7 @@ requirements:
     - plotille >=5
     - rich >=10.11.0
     - textual >=0.48
+    - docker-compose >=2,<3
 test:
   imports:
     - sugar
