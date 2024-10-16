@@ -35,6 +35,8 @@ requirements:
     - textual >=0.48
     - docker-compose >=2,<3
 test:
+  files:
+    - .sugar.yaml
   imports:
     - sugar
   commands:
