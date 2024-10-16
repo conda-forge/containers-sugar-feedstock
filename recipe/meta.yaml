@@ -39,12 +39,13 @@ test:
     - .sugar.yaml
   imports:
     - sugar
-  commands:
-    # note: pip check fails because it expect compose-go, but that is just a wrapper to the 
-    #       docker compose v2, and it is not available on conda-forge, because it is already 
-    #       provided by docker-compose >=2.
-    # - pip check
-    - sugar --help
+  # commands:
+  #   note: pip check fails because it expect compose-go, but that is just a wrapper to the 
+  #         docker compose v2, and it is not available on conda-forge, because it is already 
+  #         provided by docker-compose >=2.
+  #         sugar --help touches `docker` via sh lib, and it breaks the ci
+  #   - pip check
+  #   - sugar --help
   requires:
     - pip
 
