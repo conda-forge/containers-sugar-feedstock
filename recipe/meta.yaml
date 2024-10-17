@@ -1,5 +1,5 @@
 {% set name = "containers-sugar" %}
-{% set version = "1.15.0" %}
+{% set version = "1.16.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/containers_sugar-{{ version }}.tar.gz
-  sha256: b666210f00567f1d9d24f4c2830b1f6b8f59ef673d5d2aab5453f719c271ddfb
+  sha256: 73bb1788d58d4e528d935b2ae77afd567b7c193910024d1e58877cc92ccffc35
 
 build:
   entry_points:
