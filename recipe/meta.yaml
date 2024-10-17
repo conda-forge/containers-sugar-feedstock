@@ -14,7 +14,7 @@ build:
     - sugar = sugar.__main__:run_app
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   host:
@@ -34,6 +34,8 @@ requirements:
     - rich >=10.11.0
     - textual >=0.48
     - docker-compose >=2,<3
+    - jsonschema >=4
+    - xonsh >=0.15.0
 test:
   files:
     - .sugar.yaml
