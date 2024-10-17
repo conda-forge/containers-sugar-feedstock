@@ -34,6 +34,8 @@ requirements:
     - rich >=10.11.0
     - textual >=0.48
     - docker-compose >=2,<3
+    - jsonschema >=4
+    - xonsh >=0.15.0
 test:
   files:
     - .sugar.yaml
