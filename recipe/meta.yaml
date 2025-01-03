@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/containers_sugar-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/containers_sugar-{{ version }}.tar.gz
   sha256: 73bb1788d58d4e528d935b2ae77afd567b7c193910024d1e58877cc92ccffc35
 
 build:
@@ -14,16 +14,16 @@ build:
     - sugar = sugar.__main__:run_app
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 2
 
 requirements:
   host:
-    - python >=3.9,<3.13
+    - python {{ python_min }}
     - poetry-core >=1.0.0
     - pip
   run:
     - __unix
-    - python >=3.9,<3.13
+    - python >={{ python_min }},<3.13
     - jinja2 >=2
     - sh >=2.0.0
     - pyyaml >=6
@@ -50,6 +50,7 @@ test:
   #   - sugar --help
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/osl-incubator/containers-sugar
