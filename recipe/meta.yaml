@@ -1,5 +1,5 @@
 {% set name = "containers-sugar" %}
-{% set version = "1.16.1" %}
+{% set version = "1.17.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,14 +7,14 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/containers_sugar-{{ version }}.tar.gz
-  sha256: 73bb1788d58d4e528d935b2ae77afd567b7c193910024d1e58877cc92ccffc35
+  sha256: 0b34f5880912f3539a0f04e18ebec917318a8ad0fe1f09cff7f9d4a7a08d672d
 
 build:
   entry_points:
     - sugar = sugar.__main__:run_app
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 2
+  number: 0
 
 requirements:
   host:
