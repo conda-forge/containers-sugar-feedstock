@@ -1,13 +1,13 @@
 {% set name = "containers-sugar" %}
-{% set version = "1.19.2" %}
+{% set version = "1.19.3" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/containers_sugar-{{ version }}.tar.gz
-  sha256: 7992205686233380a0434ae51c99a8b771d036932295b3eab1f5c8f3a24585ab
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/containers_sugar-{{ version }}.tar.gz
+  sha256: 14d27220fe6fc414d126f7f4eb7d5264c97934d4854a7a72c60cd4c04a577741
 
 build:
   entry_points:
